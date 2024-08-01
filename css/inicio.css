@@ -1,0 +1,135 @@
+/* Definindo o estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #000428, #004e92);
+    background-size: cover;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Adicionando estrelas no fundo */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png');
+    opacity: 0.6;
+    z-index: 1;
+}
+
+.container {
+    position: relative;
+    background: rgba(0, 0, 50, 0.85);
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+}
+
+h1 {
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-size: 24px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.action-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.action-button {
+    background-color: #2a186d;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+    background-color: #120e49;
+}
+
+.form-container {
+    margin-top: 15px;
+}
+
+.action-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.action-form label {
+    margin-bottom: 5px;
+    color: #bbb;
+    font-size: 14px;
+}
+
+.action-form input[type="number"] {
+    padding: 8px;
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.form-btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+}
+
+.update-btn {
+    background-color: #6025e7;
+    color: white;
+}
+
+.update-btn:hover {
+    background-color: #301b61;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Responsividade */
+@media (max-width: 400px) {
+    .container {
+        padding: 15px 20px;
+    }
+
+    .action-container {
+        flex-direction: column;
+    }
+
+    .action-button {
+        margin-bottom: 10px;
+    }
+}
